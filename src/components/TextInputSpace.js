@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { GlobalContext } from '../context/GlobalState';
+// import { GlobalContext } from '../context/GlobalState';
 
 
 const TextInputSpace = () => {
@@ -12,6 +12,8 @@ const TextInputSpace = () => {
 
 	speechSynthesis.addEventListener('voiceschanged', () => { console.log(speechSynthesis.getVoices()) });
 
+
+	//EVENTS
 	utterThis.addEventListener('start', () => { 
 		setIsStarted(true);
 		setIsPaused(false);
@@ -28,7 +30,6 @@ const TextInputSpace = () => {
 
 	});
 
-	
 	utterThis.addEventListener('end', () => { 
 		speechSynthesis.cancel();
 		setIsStarted(false);
@@ -36,48 +37,48 @@ const TextInputSpace = () => {
 
 	});
 
+	//if error occurs
 	utterThis.addEventListener('error', (e) => { 
 	  console.log('An error has occurred with the speech synthesis: ' + e.error);
 	});
 
+	//update state on typing
 	const handleInput = (e) => {
 		setInputText(e.target.value);
 	}
 
+
+	//initial play
 	const handleRead = () => {
-
 		utterThis.text = inputText;
-
 		speechSynthesis.speak(utterThis);
-
 	}
 
+	//pause the speech
 	const handlePause = () => {
 		speechSynthesis.pause();
 
 	}
 
+	//resume the speech
 	const handleResume = () => {
 		speechSynthesis.resume();
 	}
 
+	//reset the synthesis
 	const handleReset = () => {
 		speechSynthesis.cancel();
 	}
- 
+ 	
+ 	//play & pause handling
 	const handleControl = () => {
-
 		if(!speechSynthesis.speaking) {
 			handleRead();
-			console.log('a start')
 		} else if(!isPaused) {
 			handlePause();
-			console.log('a pause');
 		} else {
 			handleResume();
 		}
-
-
 	}
 
 

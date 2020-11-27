@@ -1,23 +1,22 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useState } from 'react';
 
-const initialState = {
-	appState: [
-		{textToRead: 'null is undefined'}
-	]
-}
+let initialState = {
+	textToRead: 'null is undefined',
+	utter: new SpeechSynthesisUtterance()
+	}
 
 //create a context
-export const GlobalContext = createContext(initialState);
+export const GlobalContext = createContext();
 
 //a provider
 export const GlobalProvider = (props) => {
 
-	const [state, dispatch] = useReducer(AppReducer, initialState);
+	const [appState, setAppState] = useState(initialState);
+
+
 
 	return (<GlobalContext.Provider value={
-		{
-			appState: state.appState
-		}
+		[appState, setAppState]
 }>
 		{ props.children }
 	</GlobalContext.Provider>)

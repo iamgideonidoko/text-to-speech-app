@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { GlobalContext } from '../context/GlobalState';
 
-function Tests() {
+const Tests = () => {
+
+	const context = useContext(GlobalContext);
+	const [appState, setAppState]  = context;
+	// console.log('ya', appState);
 
 	console.log('Love of God');
+
 	
 
 	return (

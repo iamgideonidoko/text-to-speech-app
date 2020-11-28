@@ -1,3 +1,12 @@
+@import url('./css/icons/fontawesome/css/solid.min.css');
+
+/*>>>>>>>>>>FONT DECLARATION<<<<<<<<<<<*/
+
+@font-face {
+    font-family: futura;
+    src: url("./css/fonts/futura_reg.ttf")
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -17,4 +26,12 @@ body {
 	/*background-repeat: repeat-y;*/
 	background-size: 40rem auto;
 	font-size: 1.6rem;
+}
+
+.container {
+	/*background: red;*/
+	max-width: 120rem;
+	margin: 0 auto;
+	height: 100%;
+	padding: 1.5rem;
 }

@@ -1,0 +1,16 @@
+.text-input-space {
+	/*background: orange;*/
+	text-align: center;
+	margin-top: 2rem;
+}
+
+
+.text-input {
+	width: 60rem;
+	height: 50rem;
+
+}
+
+.control-btn-wrap {
+	margin-bottom: 1.5rem;	
+}

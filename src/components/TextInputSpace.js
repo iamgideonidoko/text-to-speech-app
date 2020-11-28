@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import '../css/TextSpaceInput.css';
 // import { GlobalContext } from '../context/GlobalState';
 
 
@@ -85,16 +86,17 @@ const TextInputSpace = () => {
 	return (
 		<div className="text-input-space">
 
+			<div className="control-btn-wrap">
+			<span className="fa fa-home"></span>
+				<button className="play-btn" onClick={handleControl}>{isPaused ? 'Read' : isStarted ? 'Pause' : 'Read'}</button>
+				<button className="stop-btn" onClick={handleReset}>Reset</button>
+			</div>
 			<div>
-				<textarea name="" id="" cols="30" rows="10" placeholder="Enter a text here" onInput={handleInput} >
+				<textarea className="text-input" placeholder="Enter text here" onInput={handleInput} >
 			</textarea>
 			</div>
 			<div className="input-info">
-			Line: {inputText.length}
-			</div>
-			<div className="">
-				<button onClick={handleControl}>{isPaused ? 'Read' : isStarted ? 'Pause' : 'Read'}</button>
-				<button onClick={handleReset}>Reset</button>
+			count: {inputText.length}
 			</div>
 			
 		</div>

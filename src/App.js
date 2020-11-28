@@ -13,8 +13,6 @@ const App = () => {
 		<div className="container">
 		<Header />
 		<TextInputSpace />
-		<Tests />
-
 		</div>
 		</GlobalProvider>
 	);

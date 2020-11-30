@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import '../css/TextSpaceInput.css';
-// import { GlobalContext } from '../context/GlobalState';
+import { GlobalContext } from '../context/GlobalState';
 
 
 const TextInputSpace = () => {
@@ -9,9 +9,11 @@ const TextInputSpace = () => {
 	const [isPaused, setIsPaused] = useState(false);
 	const [isStarted, setIsStarted] = useState(false);
 
+	const [currentVoice, , currentPitch, , currentRate, , currentVolume] = useContext(GlobalContext);
+
 	let utterThis = new SpeechSynthesisUtterance();
 
-	speechSynthesis.addEventListener('voiceschanged', () => { console.log(speechSynthesis.getVoices()) });
+	// speechSynthesis.addEventListener('voiceschanged', () => { console.log(speechSynthesis.getVoices()) });
 
 
 	//EVENTS
@@ -52,6 +54,10 @@ const TextInputSpace = () => {
 	//initial play
 	const handleRead = () => {
 		utterThis.text = inputText;
+		utterThis.pitch = currentPitch;
+		utterThis.rate = currentRate;
+		utterThis.volume = currentVolume;
+		utterThis.voice = currentVoice;
 		speechSynthesis.speak(utterThis);
 	}
 
@@ -87,7 +93,7 @@ const TextInputSpace = () => {
 		<div className="text-input-space">
 
 			<div className="control-btn-wrap">
-			<span className="fa fa-home"></span>
+			<i className="fas fa-home">s</i>
 				<button className="play-btn" onClick={handleControl}>{isPaused ? 'Read' : isStarted ? 'Pause' : 'Read'}</button>
 				<button className="stop-btn" onClick={handleReset}>Reset</button>
 			</div>

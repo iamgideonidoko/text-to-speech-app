@@ -1,22 +1,30 @@
 import React, { createContext, useState } from 'react';
 
-let initialState = {
-	textToRead: 'null is undefined',
-	utter: new SpeechSynthesisUtterance()
-	}
-
 //create a context
 export const GlobalContext = createContext();
+
 
 //a provider
 export const GlobalProvider = (props) => {
 
-	const [appState, setAppState] = useState(initialState);
+	const [currentVoice, setCurrentVoice] = useState([]);
+	const [currentPitch, setCurrentPitch] = useState(1);
+	const [currentRate, setCurrentRate] = useState(1);
+	const [currentVolume, setCurrentVolume] = useState(1);
 
 
 
 	return (<GlobalContext.Provider value={
-		[appState, setAppState]
+		[
+			currentVoice,
+			setCurrentVoice,
+			currentPitch,
+			setCurrentPitch,
+			currentRate,
+			setCurrentRate,
+			currentVolume,
+			setCurrentVolume
+		]
 }>
 		{ props.children }
 	</GlobalContext.Provider>)

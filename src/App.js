@@ -3,6 +3,7 @@ import { GlobalProvider } from './context/GlobalState';
 import Header from './components/Header';
 import TextInputSpace from './components/TextInputSpace';
 import UtteranceSetting from './components/UtteranceSetting';
+import Preload from './components/Preload';
 import './index.css';
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
 	
 	return (
 		<GlobalProvider>
+		<Preload />
 		<div className="container">
 		<Header />
 		<div className="wrapper">

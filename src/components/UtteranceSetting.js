@@ -42,7 +42,7 @@ const UtteranceSetting = () => {
 
 	return (
 		<div className="utterance-setting">
-		<h3>Uterance Setting</h3>
+		<h3>Utterance Setting</h3>
 		<div className="setting">
 			<div className="speech-voice">
 				<label htmlFor="select-voice">Change Voice</label>

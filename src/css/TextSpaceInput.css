@@ -1,16 +1,74 @@
 .text-input-space {
 	/*background: orange;*/
-	text-align: center;
+	/*text-align: right;*/
 	margin-top: 2rem;
 }
 
+.text-input-wrapper {
+	background: #eee;
+	display: inline-block;
+	border-radius: 0.6rem;
+}
 
 .text-input {
 	width: 60rem;
 	height: 50rem;
+	border: none;
+	resize: none;
+	margin: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.2);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	font-size: 1.5rem;
+	font-family: sans-serif;
+	padding: 0.5rem;
 
 }
 
+.text-input:focus {
+	outline: none;
+	border: none;
+	border-top: 1px solid rgba(0, 0, 0, 0.5);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+
+}
+
+.control-btn-wrap, .input-info {
+	/*background: orange;*/
+	text-align: right;
+	margin: 0;
+}
+
 .control-btn-wrap {
-	margin-bottom: 1.5rem;	
+	padding: 0.5rem 2rem;
+}
+
+
+.play-btn, .stop-btn {
+	font-size: 3.5rem;
+	padding: 0;
+	margin: 0 0.5rem;
+	outline: none;
+	display: inline-block;
+	position: relative;
+	border-radius: 10rem;
+	border: none;
+
+
+}
+
+.play-btn i, .stop-btn i {
+	display: inline-block;
+	/*color: black;*/
+	color: #fd3db9;
+}
+
+.input-info span {	
+	margin: 0 0.5rem;
+}
+
+.input-info {
+	/*background: yellow;*/
+	margin-top: -0.4rem;
+	padding: 1.5rem 2rem;
+
 }

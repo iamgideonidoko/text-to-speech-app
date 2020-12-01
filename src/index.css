@@ -7,6 +7,10 @@
     src: url("./css/fonts/futura_reg.ttf")
 }
 
+:root {
+	--pri-color: #49fcd4;
+}
+
 * {
 	margin: 0;
 	padding: 0;

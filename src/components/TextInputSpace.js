@@ -88,21 +88,35 @@ const TextInputSpace = () => {
 		}
 	}
 
+	//for word count
+	let wordArr = inputText.trim().split(/\s+/);
+
 
 	return (
 		<div className="text-input-space">
 
-			<div className="control-btn-wrap">
-			<i className="fas fa-home">s</i>
-				<button className="play-btn" onClick={handleControl}>{isPaused ? 'Read' : isStarted ? 'Pause' : 'Read'}</button>
-				<button className="stop-btn" onClick={handleReset}>Reset</button>
-			</div>
-			<div>
-				<textarea className="text-input" placeholder="Enter text here" onInput={handleInput} >
-			</textarea>
-			</div>
-			<div className="input-info">
-			count: {inputText.length}
+			<div className="text-input-wrapper">
+
+				<div className="control-btn-wrap">
+					<button className="play-btn" onClick={handleControl}>{
+						/* isPaused ? 'Read' : isStarted ? 'Pause' : 'Read' */
+				}
+					<i className={isPaused ? 'fas fa-play-circle' : isStarted ? 'fas fa-pause-circle' : 'fas fa-play-circle'}></i>
+					</button>
+					<button className="stop-btn" onClick={handleReset}>
+					<i className="fas fa-stop-circle"></i>
+					</button>
+				</div>
+				<div>
+					<textarea className="text-input" placeholder="Enter text here" onInput={handleInput} >
+				</textarea>
+				</div>
+				<div className="input-info">
+				<span className="char-count">Char: {inputText.length}</span> 	
+				<span className="word-count">
+				Word: {inputText.trim().length == 0 ? 0 : wordArr.length}
+				</span>
+				</div>
 			</div>
 			
 		</div>

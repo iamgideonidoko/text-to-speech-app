@@ -12,8 +12,10 @@ const App = () => {
 		<GlobalProvider>
 		<div className="container">
 		<Header />
-		<UtteranceSetting />
-		<TextInputSpace />
+		<div className="wrapper">
+			<UtteranceSetting />
+			<TextInputSpace />
+		</div>
 		</div>
 		</GlobalProvider>
 	);

@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import '../css/Header.css';
+
 
 const Header = () => {
 
@@ -7,8 +9,8 @@ const Header = () => {
 	});
 	
 	return (
-		<div>
-			<h1 className="header-txt">Text to Speech</h1>	
+		<div className="header">
+			<h1 className="header-txt">Text to <span className="text" data-text="Speech">Speech</span></h1>	
 		</div>
 	)
 }

@@ -11,6 +11,7 @@ export const GlobalProvider = (props) => {
 	const [currentPitch, setCurrentPitch] = useState(1);
 	const [currentRate, setCurrentRate] = useState(1);
 	const [currentVolume, setCurrentVolume] = useState(1);
+	const [isNavOpen, setIsNavOpen] = useState(false);
 
 
 
@@ -23,7 +24,9 @@ export const GlobalProvider = (props) => {
 			currentRate,
 			setCurrentRate,
 			currentVolume,
-			setCurrentVolume
+			setCurrentVolume,
+			isNavOpen,
+			setIsNavOpen
 		]
 }>
 		{ props.children }

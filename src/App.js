@@ -5,6 +5,7 @@ import TextInputSpace from './components/TextInputSpace';
 import UtteranceSetting from './components/UtteranceSetting';
 import Preload from './components/Preload';
 import './index.css';
+import './css/MediaQueries.css';
 
 const App = () => {
 	//Main Ap component

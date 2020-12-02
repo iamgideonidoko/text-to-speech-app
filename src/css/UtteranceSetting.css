@@ -1,8 +1,12 @@
 .utterance-setting {
-	margin-top: 8rem;
+	margin-top: 12rem;
+	/*background: yellow;*/
+	width: calc(100% - 2rem);
+	z-index: 3;
 }
 
 .setting {
+
 }
 
 .speech-voice,

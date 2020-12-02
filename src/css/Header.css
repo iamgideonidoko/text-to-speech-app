@@ -9,6 +9,15 @@
 	letter-spacing: 0.5rem;
 }
 
+.ht-first-part {
+	display: block;
+	font-size: 2.8rem;
+}
+
+.setting-btn {
+	display: none;
+}
+
 .text{
   position: relative;
   color: #fff;
@@ -16,7 +25,7 @@
   font-size: 2.5rem;
   transform: scale(2);
   padding: 20px 0;
-  letter-spacing: 5px;
+  letter-spacing: 10px;
   /*text-transform: uppercase;*/
 }
 .text:before,

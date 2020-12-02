@@ -5,7 +5,7 @@ import '../css/UtteranceSetting.css';
 
 const UtteranceSetting = () => {
 	const [voices, setVoices] = useState(speechSynthesis.getVoices());
-	const [, setCurrentVoice, currentPitch, setCurrentPitch, currentRate, setCurrentRate, currentVolume, setCurrentVolume] = useContext(GlobalContext);
+	const [, setCurrentVoice, currentPitch, setCurrentPitch, currentRate, setCurrentRate, currentVolume, setCurrentVolume, isNavOpen] = useContext(GlobalContext);
 
 	window.addEventListener('load', () => {
 		document.getElementById('pitch-slider').value = 1;
@@ -41,7 +41,7 @@ const UtteranceSetting = () => {
 
 
 	return (
-		<div className="utterance-setting">
+		<div className={isNavOpen ? "utterance-setting mobile-active-utterance-setting" : "utterance-setting"} >
 		<h3>Utterance Setting</h3>
 		<div className="setting">
 			<div className="speech-voice">

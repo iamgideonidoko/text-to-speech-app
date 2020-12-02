@@ -9,14 +9,17 @@
 	display: inline-block;
 	border-radius: 0.6rem;
 	width: 100%;
-	/*background: green;*/
 	height: 100%;
+	position: relative;
 
 }
 
 .text-input {
 	width: 100%;
 	height: calc(100vh - 12rem);
+	min-height: calc(52rem - 12rem);
+	/*height: calc(100% - 12rem);*/
+	display: block;
 	border: none;
 	resize: none;
 	margin: 0;
@@ -39,8 +42,8 @@
 .text-input:focus {
 	outline: none;
 	border: none;
-	border-top: 1px solid rgba(0, 0, 0, 0.5);
-	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	border-top: 1px solid rgba(0, 0, 0, 0.4);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 
 }
 

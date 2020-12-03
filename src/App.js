@@ -14,21 +14,23 @@ const App = () => {
 	
 	return (
 		<Router>
-		<GlobalProvider>
-		<Route exact path="/">
-		<Preload />
-		<div className="container">
-		<Header />
-		<div className="wrapper">
-			<UtteranceSetting />
-			<TextInputSpace />
-		</div>
-		</div>
-		</Route>
-		<Route>
-			<Redirection />
-		</Route>
-		</GlobalProvider>
+			<GlobalProvider>
+				<Switch>
+					<Route exact path="/">
+						<Preload />
+						<div className="container">
+							<Header />
+							<div className="wrapper">
+								<UtteranceSetting />
+								<TextInputSpace />
+							</div>
+						</div>
+					</Route>
+					<Route>
+						<Redirection />
+					</Route>
+				</Switch>
+			</GlobalProvider>
 		</Router>
 	);
 

@@ -108,13 +108,13 @@ const TextInputSpace = () => {
 					</button>
 				</div>
 				<div>
-					<textarea className="text-input" placeholder="Enter text here" onInput={handleInput} >
+					<textarea className="text-input" placeholder="Enter text here..." onInput={handleInput} >
 				</textarea>
 				</div>
 				<div className="input-info">
 				<span className="char-count">Char: {inputText.length}</span> 	
 				<span className="word-count">
-				Word: {inputText.trim().length == 0 ? 0 : wordArr.length}
+				Word: {inputText.trim().length === 0 ? 0 : wordArr.length}
 				</span>
 				</div>
 			</div>

@@ -10,7 +10,7 @@ import './index.css';
 import './css/MediaQueries.css';
 
 const App = () => {
-	//Main Ap component
+	//Main App component
 	
 	return (
 		<Router>

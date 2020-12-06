@@ -5,7 +5,7 @@ import '../css/UtteranceSetting.css';
 
 const UtteranceSetting = () => {
 	const [voices, setVoices] = useState(speechSynthesis.getVoices());
-	const [, setCurrentVoice, currentPitch, setCurrentPitch, currentRate, setCurrentRate, currentVolume, setCurrentVolume, isNavOpen] = useContext(GlobalContext);
+	const [currentVoice, setCurrentVoice, currentPitch, setCurrentPitch, currentRate, setCurrentRate, currentVolume, setCurrentVolume, isNavOpen] = useContext(GlobalContext);
 
 	window.addEventListener('load', () => {
 		document.getElementById('pitch-slider').value = 1;
@@ -17,7 +17,7 @@ const UtteranceSetting = () => {
 	speechSynthesis.addEventListener('voiceschanged', () => { 
 		let gottenVoices = speechSynthesis.getVoices();
 		setVoices(gottenVoices);
-		setCurrentVoice(gottenVoices[0]);
+		// setCurrentVoice(gottenVoices[0]);
 	});
 
 
@@ -49,7 +49,7 @@ const UtteranceSetting = () => {
 				<select id="voice-select" onChange={handleVoiceChange} >
 					{
 						voices.map((voice, idx) => (
-							<option key={idx} value={voice.name + ' - ' + voice.lang}>{voice.name}</option>
+							<option key={idx} value={voice.name}>{voice.name + ' - ' + voice.lang}</option>
 							))
 					}
 				</select>

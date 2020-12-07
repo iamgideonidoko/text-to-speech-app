@@ -9,7 +9,7 @@ const TextInputSpace = () => {
 	const [isPaused, setIsPaused] = useState(false);
 	const [isStarted, setIsStarted] = useState(false);
 
-	const [currentVoice, , currentPitch, , currentRate, , currentVolume] = useContext(GlobalContext);
+	const [, , currentPitch, , currentRate, , currentVolume] = useContext(GlobalContext);
 
 	let utterThis = new SpeechSynthesisUtterance();
 
@@ -53,11 +53,12 @@ const TextInputSpace = () => {
 
 	//initial play
 	const handleRead = () => {
+		let voices = speechSynthesis.getVoices();
 		utterThis.text = inputText;
 		utterThis.pitch = currentPitch;
 		utterThis.rate = currentRate;
 		utterThis.volume = currentVolume;
-		utterThis.voice = currentVoice;
+		utterThis.voice = voices.find(voice => voice.name === document.querySelector('#voice-select').value);
 		speechSynthesis.speak(utterThis);
 	}
 

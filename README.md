@@ -8,12 +8,12 @@ This app uses the Web Speech API to convert text to voice speech. It is built wi
 
 ## Contributing
 
-This project is built with React. If you happen to find any bug on the [site](https://ig-ifex.netlify.app) or you have a features request, do well to [create an issue](https://github.com/IGIfeanyichukwu/text-to-speech-app/issues) on it.
+This project is built with React. If you happen to find any bug on the [site](https://ig-ifex.netlify.app) or you have a features request, do well to [create an issue](https://github.com/IamGideonIdoko/text-to-speech-app/issues) on it.
 
 * Clone the repository 
 
 ```bash
-    git clone https://github.com/IGIfeanyichukwu/text-to-speech-app.git
+    git clone https://github.com/IamGideonIdoko/text-to-speech-app.git
 ```
 
 * Change the directory
@@ -43,11 +43,11 @@ This project is built with React. If you happen to find any bug on the [site](ht
     npm run build
 ```
 
-[Pull requests](https://github.com/IGIfeanyichukwu/text-to-speech-app/pulls) are highly welcome.
+[Pull requests](https://github.com/IamGideonIdoko/text-to-speech-app/pulls) are highly welcome.
 
 ## License
 
 MIT
 
 ### Author
-[I. G Ifeanyichuwku (Ifex)](https://ig-ifex.netlify.app)
+[Gideon Idoko](https://github.com/IamGideonIdoko)
